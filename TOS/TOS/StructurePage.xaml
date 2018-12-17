@@ -1,0 +1,21 @@
+﻿<Page x:Class="TOS.StructurePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TOS"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StructurePage">
+
+    <Grid>
+        <Label Content="Председатель" HorizontalAlignment="Left" Margin="60,56,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
+        <Label Content="Уличные комитеты" HorizontalAlignment="Left" Margin="60,89,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
+        <Label Content="Старшие по подъездам" HorizontalAlignment="Left" Margin="60,122,0,0" VerticalAlignment="Top" Height="28" Width="141"/>
+        <Label Content="Комитеты совета ТОС" HorizontalAlignment="Left" Margin="60,155,0,0" VerticalAlignment="Top" Height="28" Width="175"/>
+        <Label Content="Состав совета" HorizontalAlignment="Left" Margin="60,188,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
+        <Label Content="Участие в конкурсах" HorizontalAlignment="Left" Margin="60,221,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
+        <Label Content="СТРУКТУРА ТОС......" HorizontalAlignment="Left" Margin="296,10,0,0" VerticalAlignment="Top" Width="451" FontSize="16" FontWeight="Bold"/>
+
+    </Grid>
+</Page>

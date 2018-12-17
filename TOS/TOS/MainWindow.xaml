@@ -11,7 +11,7 @@
             <RowDefinition Height="25" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Button Grid.Row="1" Name="StructureButton" Content="Структура" Margin="510,51,12,311"/>
+        <Button Grid.Row="1" Name="StructureButton" Content="Структура" Margin="12,10,567,352"/>
         <ComboBox Grid.Row="0" Height="auto" VerticalAlignment="Top" Margin="165,0,220,0" >
             <ComboBoxItem x:Name="tos1" Content="ТОС1" IsSelected="True"></ComboBoxItem>
             <ComboBoxItem x:Name="tos2" Content="ТОС2" ></ComboBoxItem>
@@ -26,5 +26,8 @@
         <Label Content="Председатель:" HorizontalAlignment="Left" Margin="10,131,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="Дата основания:" HorizontalAlignment="Left" Margin="10,162,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="ГРАНИЦЫ (Картинка)" HorizontalAlignment="Left" Margin="12,193,0,0" Grid.Row="1" VerticalAlignment="Top" Height="38" Width="187"/>
+        <Button Grid.Row="1" x:Name="StructureButton_Copy" Content="Гранты" Margin="230,10,349,352"/>
+        <Button Grid.Row="1" x:Name="StructureButton_Copy1" Content="Награды" Margin="448,10,131,352"/>
+        <Button Grid.Row="1" x:Name="StructureButton_Copy2" Content="Нач..." Margin="666,10,13,352"/>
     </Grid>
 </Window>

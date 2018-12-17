@@ -7,14 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Margin="319,119,319,268" Content="Кнопочка"/>
-        <ComboBox Margin="10,10,10,0" VerticalAlignment="Top" Height="54">
-            <TextBlock>Первый ТОС</TextBlock>
-            <TextBlock>Второй ТОС</TextBlock>
-            <TextBlock>Третий ТОС</TextBlock>
-            <TextBlock>Четвертый ТОС</TextBlock>
-            <TextBlock>Пятый ТОС</TextBlock>
-            <TextBlock>Шестой ТОС</TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Grid.Row="1" Content="Кнопочка"/>
+        <ComboBox Grid.Row="0"  Width="400" Height="auto" VerticalAlignment="Top" >
+            <ComboBoxItem x:Name="tos1" Content="ТОС1" IsSelected="True"></ComboBoxItem>
+            <ComboBoxItem x:Name="tos2" Content="ТОС2" ></ComboBoxItem>
+            <ComboBoxItem x:Name="tos3" Content="ТОС3" ></ComboBoxItem>
+            <ComboBoxItem x:Name="tos4" Content="ТОС4" ></ComboBoxItem>
+            <ComboBoxItem x:Name="tos5" Content="ТОС5" ></ComboBoxItem>
+            <ComboBoxItem x:Name="tos6" Content="ТОС6" ></ComboBoxItem>
+
         </ComboBox>
     </Grid>
 </Window>

@@ -8,5 +8,6 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Margin="371,192,267,189" Content="lol"/>
+        <Button Margin="557,35,81,352" Content="lol"/>
     </Grid>
 </Window>

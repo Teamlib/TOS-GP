@@ -7,8 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Margin="371,192,267,189" Content="lol"/>
-        <Button Margin="557,35,81,352" Content="lol"/>
-        <ComboBox HorizontalAlignment="Left" Margin="214,39,0,0" VerticalAlignment="Top" Width="433" Height="49"/>
+        <Button Margin="319,119,319,268" Content="Кнопочка"/>
+        <ComboBox Margin="10,10,10,0" VerticalAlignment="Top" Height="54">
+            <TextBlock>Первый ТОС</TextBlock>
+            <TextBlock>Второй ТОС</TextBlock>
+            <TextBlock>Третий ТОС</TextBlock>
+            <TextBlock>Четвертый ТОС</TextBlock>
+            <TextBlock>Пятый ТОС</TextBlock>
+            <TextBlock>Шестой ТОС</TextBlock>
+        </ComboBox>
     </Grid>
 </Window>

@@ -9,5 +9,6 @@
     <Grid>
         <Button Margin="371,192,267,189" Content="lol"/>
         <Button Margin="557,35,81,352" Content="lol"/>
+        <ComboBox HorizontalAlignment="Left" Margin="214,39,0,0" VerticalAlignment="Top" Width="433" Height="49"/>
     </Grid>
 </Window>

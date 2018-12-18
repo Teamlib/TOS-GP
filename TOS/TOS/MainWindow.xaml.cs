@@ -25,6 +25,18 @@ namespace TOS
         {
             InitializeComponent();
         }
-        
+
+        private void Tos1_Selected(object sender, RoutedEventArgs e)
+        {
+            using (var conn = new SQLiteConnection("TOSBase.mdf"))
+
+            using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Петровского микрорайона'"))
+            {
+                while (statement.Step() == SQLiteResult.ROW)
+                {
+                    Pred.Text = Pred.Text + (string)statement[0];
+                }
+            }
+        }
     }
 }

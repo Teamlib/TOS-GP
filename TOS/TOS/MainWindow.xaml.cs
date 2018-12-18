@@ -26,17 +26,127 @@ namespace TOS
             InitializeComponent();
         }
 
-        private void Tos1_Selected(object sender, RoutedEventArgs e)
+    
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            using (var conn = new SQLiteConnection("TOSBase.mdf"))
-
-            using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Петровского микрорайона'"))
+            Pred.Text = null;
+            if (tos1.IsSelected)
             {
-                while (statement.Step() == SQLiteResult.ROW)
+                using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    Pred.Text = Pred.Text + (string)statement[0];
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Петровского микрорайона'"))
+                    {
+                        while (statement.Step() == SQLiteResult.ROW)
+                        {
+                            Pred.Text = "Председатель: " + (string)statement[0];
+                        }
+                    }
+                }
+            }            
+            else if (tos2.IsSelected)
+            {
+                using (var conn = new SQLiteConnection("TT.db"))
+                {
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Червонного микрорайона'"))
+                    {
+                        while (statement.Step() == SQLiteResult.ROW)
+                        {
+                            Pred.Text = "Председатель: " + (string)statement[0];
+                        }
+                    }
                 }
             }
+            else if (tos3.IsSelected)
+            {
+                using (var conn = new SQLiteConnection("TT.db"))
+                {
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Матросовского микрорайона'"))
+                    {
+                        while (statement.Step() == SQLiteResult.ROW)
+                        {
+                            Pred.Text = "Председатель: " + (string)statement[0];
+                        }
+                    }
+                }
+            }
+            else if (tos4.IsSelected)
+            {
+                using (var conn = new SQLiteConnection("TT.db"))
+                {
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Стахановского микрорайона'"))
+                    {
+                        while (statement.Step() == SQLiteResult.ROW)
+                        {
+                            Pred.Text = "Председатель: " + (string)statement[0];
+                        }
+                    }
+                }
+            }
+            else if (tos5.IsSelected)
+            {
+                using (var conn = new SQLiteConnection("TT.db"))
+                {
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Красноармейского микрорайона'"))
+                    {
+                        while (statement.Step() == SQLiteResult.ROW)
+                        {
+                            Pred.Text = "Председатель: " + (string)statement[0];
+                        }
+                    }
+                }
+            }
+            else if (tos6.IsSelected)
+            {
+                using (var conn = new SQLiteConnection("TT.db"))
+                {
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Локомотивного микрорайона'"))
+                    {
+                        while (statement.Step() == SQLiteResult.ROW)
+                        {
+                            Pred.Text = "Председатель: " + (string)statement[0];
+                        }
+                    }
+                }
+            }
+            else if (tos7.IsSelected)
+            {
+                using (var conn = new SQLiteConnection("TT.db"))
+                {
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Привокзального микрорайона'"))
+                    {
+                        while (statement.Step() == SQLiteResult.ROW)
+                        {
+                            Pred.Text = "Председатель: " + (string)statement[0];
+                        }
+                    }
+                }
+            }
+            else if (tos8.IsSelected)
+            {
+                using (var conn = new SQLiteConnection("TT.db"))
+                {
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Власихинского микрорайона'"))
+                    {
+                        while (statement.Step() == SQLiteResult.ROW)
+                        {
+                            Pred.Text = "Председатель: " + (string)statement[0];
+                        }
+                    }
+                }
+            }
+            else if (tos9.IsSelected)
+            {
+                using (var conn = new SQLiteConnection("TT.db"))
+                {
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС микрорайона Зеленая роща'"))
+                    {
+                        while (statement.Step() == SQLiteResult.ROW)
+                        {
+                            Pred.Text = "Председатель: " + (string)statement[0];
+                        }
+                    }
+                }
+            }            
         }
     }
 }

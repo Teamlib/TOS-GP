@@ -8,17 +8,20 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="38" />
-            <RowDefinition Height="30" />
+            <RowDefinition Height="35" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" Height="38" VerticalAlignment="Top" Background="#FF93CBF9"/>
-        <ComboBox Grid.Row="1" Height="25" Width="400" HorizontalAlignment="Left" HorizontalContentAlignment="Center" >
-            <ComboBoxItem x:Name="tos1" Content="ТОС1" IsSelected="True"></ComboBoxItem>
-            <ComboBoxItem x:Name="tos2" Content="ТОС2" ></ComboBoxItem>
-            <ComboBoxItem x:Name="tos3" Content="ТОС3" ></ComboBoxItem>
-            <ComboBoxItem x:Name="tos4" Content="ТОС4" ></ComboBoxItem>
-            <ComboBoxItem x:Name="tos5" Content="ТОС5" ></ComboBoxItem>
-            <ComboBoxItem x:Name="tos6" Content="ТОС6" ></ComboBoxItem>
+        <ComboBox Grid.Row="1" Height="28" Width="400" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" >
+            <ComboBoxItem x:Name="tos1" Content="ТОС Петровского микрорайона" IsSelected="True"></ComboBoxItem>
+            <ComboBoxItem x:Name="tos2" Content="ТОС Червонного микрорайона" ></ComboBoxItem>
+            <ComboBoxItem x:Name="tos3" Content="ТОС Матросовского микрорайона" ></ComboBoxItem>
+            <ComboBoxItem x:Name="tos4" Content="ТОС Стахановского микрорайона" ></ComboBoxItem>
+            <ComboBoxItem x:Name="tos5" Content="ТОС Красноармейского микрорайона" ></ComboBoxItem>
+            <ComboBoxItem x:Name="tos6" Content="ТОС Локомотивного микрорайона" ></ComboBoxItem>
+            <ComboBoxItem x:Name="tos7" Content="ТОС Привокзального микрорайона" ></ComboBoxItem>
+            <ComboBoxItem x:Name="tos8" Content="ТОС Власихинского микрорайона" ></ComboBoxItem>
+            <ComboBoxItem x:Name="tos9" Content="ТОС микрорайона «Зеленая роща»" ></ComboBoxItem>
         </ComboBox>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>

@@ -9,13 +9,13 @@
       Title="StructurePage">
 
     <Grid>
-        <Label Content="Председатель" HorizontalAlignment="Left" Margin="60,56,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
-        <Label Content="Уличные комитеты" HorizontalAlignment="Left" Margin="60,89,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
-        <Label Content="Старшие по подъездам" HorizontalAlignment="Left" Margin="60,122,0,0" VerticalAlignment="Top" Height="28" Width="141"/>
-        <Label Content="Комитеты совета ТОС" HorizontalAlignment="Left" Margin="60,155,0,0" VerticalAlignment="Top" Height="28" Width="175"/>
-        <Label Content="Состав совета" HorizontalAlignment="Left" Margin="60,188,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
-        <Label Content="Участие в конкурсах" HorizontalAlignment="Left" Margin="60,221,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
-        <Label Content="СТРУКТУРА ТОС......" HorizontalAlignment="Left" Margin="296,10,0,0" VerticalAlignment="Top" Width="451" FontSize="16" FontWeight="Bold"/>
+        <TextBlock Text="Председатель" HorizontalAlignment="Left" Margin="60,56,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
+        <TextBlock Text="Уличные комитеты" HorizontalAlignment="Left" Margin="60,89,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
+        <TextBlock Text="Старшие по подъездам" HorizontalAlignment="Left" Margin="60,122,0,0" VerticalAlignment="Top" Height="28" Width="141"/>
+        <TextBlock Text="Комитеты совета ТОС" HorizontalAlignment="Left" Margin="60,155,0,0" VerticalAlignment="Top" Height="28" Width="175"/>
+        <TextBlock Text="Состав совета" HorizontalAlignment="Left" Margin="60,188,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
+        <TextBlock Text="Участие в конкурсах" HorizontalAlignment="Left" Margin="60,221,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
+        <TextBlock Text="СТРУКТУРА ТОС......" HorizontalAlignment="Left" Margin="296,10,0,0" VerticalAlignment="Top" Width="451" FontSize="16" FontWeight="Bold"/>
 
     </Grid>
 </Page>

@@ -5,17 +5,25 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TOS"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="StructurePage">
+      d:DesignHeight="463.133" d:DesignWidth="876.168" Width="auto" Height="auto"
+      Title="StructurePage" Background="White">
 
     <Grid>
-        <TextBlock Text="Председатель" HorizontalAlignment="Left" Margin="60,56,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
-        <TextBlock Text="Уличные комитеты" HorizontalAlignment="Left" Margin="60,89,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
-        <TextBlock Text="Старшие по подъездам" HorizontalAlignment="Left" Margin="60,122,0,0" VerticalAlignment="Top" Height="28" Width="141"/>
-        <TextBlock Text="Комитеты совета ТОС" HorizontalAlignment="Left" Margin="60,155,0,0" VerticalAlignment="Top" Height="28" Width="175"/>
-        <TextBlock Text="Состав совета" HorizontalAlignment="Left" Margin="60,188,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
-        <TextBlock Text="Участие в конкурсах" HorizontalAlignment="Left" Margin="60,221,0,0" VerticalAlignment="Top" Height="28" Width="123"/>
-        <TextBlock Text="СТРУКТУРА ТОС......" HorizontalAlignment="Left" Margin="296,10,0,0" VerticalAlignment="Top" Width="451" FontSize="16" FontWeight="Bold"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Структура ТОС......" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" FontSize="16" FontWeight="Bold"/>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Center">
+            <Button Margin="0 0 0 0" Content="Председатель" HorizontalAlignment="Center" Height="28" Width="188"/>
+            <Button Margin="0 30 0 0" Content="Уличные комитеты" HorizontalAlignment="Center" Height="28" Width="188"/>
+            <Button Margin="0 30 0 0" Content="Старшие по подъездам" HorizontalAlignment="Center" Height="28" Width="188"/>
+            <Button Margin="0 30 0 0" Content="Комитеты совета ТОС" HorizontalAlignment="Center" Height="28" Width="188"/>
+            <Button Margin="0 30 0 0" Content="Состав совета" HorizontalAlignment="Center" Height="28" Width="188"/>
+            <Button Margin="0 30 0 0" Content="Участие в конкурсах" HorizontalAlignment="Center" Height="28" Width="188"/>
+        </StackPanel>
 
     </Grid>
 </Page>

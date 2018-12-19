@@ -15,6 +15,9 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Text="Структура ТОС......" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" FontSize="16" FontWeight="Bold"/>
+        <Button Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="auto" FontSize="16" FontWeight="Bold" Style="{x:Null}" Background="{x:Null}" BorderThickness="0" Click="Button_Click" >
+            <Hyperlink > Назад </Hyperlink>
+        </Button>
 
         <StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Center">
             <Button Margin="0 0 0 0" Content="Председатель" HorizontalAlignment="Center" Height="28" Width="188"/>
@@ -24,6 +27,6 @@
             <Button Margin="0 30 0 0" Content="Состав совета" HorizontalAlignment="Center" Height="28" Width="188"/>
             <Button Margin="0 30 0 0" Content="Участие в конкурсах" HorizontalAlignment="Center" Height="28" Width="188"/>
         </StackPanel>
-
+        <Frame Grid.RowSpan="2" Name="fm"></Frame>
     </Grid>
 </Page>

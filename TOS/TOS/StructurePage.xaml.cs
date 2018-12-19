@@ -24,5 +24,10 @@ namespace TOS
         {
             InitializeComponent();
         }
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            fm.NavigationService.Navigate(new Uri("Page1.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

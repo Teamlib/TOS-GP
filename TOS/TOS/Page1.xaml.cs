@@ -30,16 +30,16 @@ namespace TOS
         {         
             combobox.SelectedIndex = 0;
             Pred.Text = null;
-            selectedTos();      
+            SelectedTos();      
         }
 
         string name;
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            selectedTos();
+            SelectedTos();
         }
-
-        public void selectedTos()
+        internal int gg=4;
+        public void SelectedTos()
         {
             name = ((ComboBoxItem)combobox.SelectedItem).Content.ToString();
             if (tos1.IsSelected)

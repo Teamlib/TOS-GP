@@ -25,16 +25,21 @@ namespace TOS
         {
             InitializeComponent();
         }
-
-    
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+   
+        string name;
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Pred.Text = null;
+            selectedTos();
+        }
+
+        public void selectedTos()
+        {
+            name = ((ComboBoxItem)combobox.SelectedItem).Content.ToString();
             if (tos1.IsSelected)
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Петровского микрорайона'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name= '" + name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -42,12 +47,12 @@ namespace TOS
                         }
                     }
                 }
-            }            
+            }
             else if (tos2.IsSelected)
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Червонного микрорайона'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -60,7 +65,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Матросовского микрорайона'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -73,7 +78,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Стахановского микрорайона'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -86,7 +91,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Красноармейского микрорайона'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -99,7 +104,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Локомотивного микрорайона'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -112,7 +117,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Привокзального микрорайона'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -125,7 +130,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС Власихинского микрорайона'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -138,7 +143,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='ТОС микрорайона Зеленая роща'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -146,7 +151,14 @@ namespace TOS
                         }
                     }
                 }
-            }            
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            combobox.SelectedIndex = 0;
+            Pred.Text = null;
+            selectedTos();
         }
     }
 }

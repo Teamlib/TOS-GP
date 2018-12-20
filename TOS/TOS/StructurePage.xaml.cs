@@ -29,5 +29,10 @@ namespace TOS
         {
             fm.NavigationService.Navigate(new Uri("Page1.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            struc.Text = gl.name;
+        }        
     }
 }

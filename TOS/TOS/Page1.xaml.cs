@@ -33,20 +33,19 @@ namespace TOS
             SelectedTos();      
         }
 
-        string name;
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             SelectedTos();
         }
-        internal int gg=4;
+
         public void SelectedTos()
         {
-            name = ((ComboBoxItem)combobox.SelectedItem).Content.ToString();
+            gl.name = ((ComboBoxItem)combobox.SelectedItem).Content.ToString();
             if (tos1.IsSelected)
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name= '" + name + "'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name= '" + gl.name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -59,7 +58,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + gl.name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -72,7 +71,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + gl.name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -85,7 +84,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + gl.name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -98,7 +97,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + gl.name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -111,7 +110,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + gl.name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -124,7 +123,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + gl.name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -137,7 +136,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + gl.name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -150,7 +149,7 @@ namespace TOS
             {
                 using (var conn = new SQLiteConnection("TT.db"))
                 {
-                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + name + "'"))
+                    using (var statement = conn.Prepare("SELECT chairman FROM tos_info WHERE tos_name='" + gl.name + "'"))
                     {
                         while (statement.Step() == SQLiteResult.ROW)
                         {
@@ -166,4 +165,10 @@ namespace TOS
             fm.NavigationService.Navigate(new Uri("StructurePage.xaml", UriKind.RelativeOrAbsolute));
         }
     }
+
+    public static class gl
+    {
+        public static string name { get; set; }
+    }
+
 }

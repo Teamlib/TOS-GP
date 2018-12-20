@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:TOS"
       mc:Ignorable="d" 
       d:DesignHeight="463.133" d:DesignWidth="876.168" Width="auto" Height="auto"
-      Title="StructurePage" Background="White">
+      Title="StructurePage" Background="White" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -14,7 +14,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Структура ТОС......" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" FontSize="16" FontWeight="Bold"/>
+        <TextBlock Name="struc" Grid.Row="0" Text="Структура ТОС" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" FontSize="16" FontWeight="Bold" />
         <Button Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="auto" FontSize="16" FontWeight="Bold" Style="{x:Null}" Background="{x:Null}" BorderThickness="0" Click="Button_Click" >
             <Hyperlink > Назад </Hyperlink>
         </Button>
